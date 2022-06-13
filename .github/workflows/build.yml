@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Cache APT Packages
-      uses: awalsh128/cache-apt-pkgs-action@v1.0.2
-      with:
-        packages: libssl-dev libsrt-openssl-dev libopus-dev libvpx-dev libsrtp2-dev libfdk-aac-dev nasm ffmpeg libjemalloc-dev libpcre2-dev libopenh264-dev
+    - name: Install Dependencies
+      run: |
+        apt update
+        apt install -yq libssl-dev libsrt-openssl-dev libopus-dev libvpx-dev libsrtp2-dev libfdk-aac-dev nasm ffmpeg libjemalloc-dev libpcre2-dev libopenh264-dev
           
     - name: Build Release
       run: |
