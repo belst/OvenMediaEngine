@@ -16,8 +16,8 @@ jobs:
     
     - name: Install Dependencies
       run: |
-        apt update
-        apt install -yq libssl-dev libsrt-openssl-dev libopus-dev libvpx-dev libsrtp2-dev libfdk-aac-dev nasm ffmpeg libjemalloc-dev libpcre2-dev libopenh264-dev
+        sudo apt update
+        sudo apt install -yq libssl-dev libsrt-openssl-dev libopus-dev libvpx-dev libsrtp2-dev libfdk-aac-dev nasm ffmpeg libjemalloc-dev libpcre2-dev libopenh264-dev
           
     - name: Build Release
       run: |
